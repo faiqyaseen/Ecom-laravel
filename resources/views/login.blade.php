@@ -12,13 +12,14 @@
             </div>
             <h3 class="text-center text-primary">User Login</h3>
 
-                <form action="">
+                <form action="login" method="POST">
+                  @csrf
                   <div class="form-outline my-3">
                     <input type="email" name="useremail" id="useremail" class="form-control">
                     <label class="form-label" for="useremail">Email</label>
                   </div>
                   <div class="form-outline my-3">
-                    <input type="password" name="useremail" id="userpassword" class="form-control">
+                    <input type="password" name="userpassword" id="userpassword" class="form-control">
                     <label class="form-label" for="userpassword">Password</label>
                   </div>
                   <input type="submit" value="Login" class="btn btn-primary d-block mx-auto">
