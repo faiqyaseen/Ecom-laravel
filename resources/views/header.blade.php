@@ -63,9 +63,6 @@
           </button>
         </div> --}}
         <div class="d-flex align-items-center">
-          <button type="button" class="btn btn-primary me-3">
-            Sign up for free
-          </button>
           @if (Session::has('user'))
           <ul class="navbar-nav">
             <!-- Dropdown -->
@@ -88,6 +85,9 @@
             </li>
           </ul>
           @else
+            <a href="/signup" class="btn btn-primary me-3">
+              Sign up for free
+            </a>
           <a href="/login">
             <button type="button" class="btn btn-primary px-3 me-2">
               Login

@@ -10,20 +10,25 @@
             <div class="rounded-circle mx-auto bg-primary d-flex border mb-4" style="height: 100px; width: 100px">
               <i class="fa fa-user fa-3x m-auto text-light"></i>
             </div>
-            <h3 class="text-center text-primary">User Login</h3>
+            <h3 class="text-center text-primary">User Registration</h3>
 
-                <form action="login" method="POST">
+                <form action="/signup" method="POST">
                   @csrf
                   <div class="form-outline my-3">
-                    <input type="email" name="useremail" id="useremail" class="form-control">
+                    <input type="text" name="username" placeholder="Enter Your Name" id="username" class="form-control">
+                    <label class="form-label" for="username">Name</label>
+                  </div>
+
+                  <div class="form-outline my-3">
+                    <input type="email" name="useremail" placeholder="Enter Your Email Address" id="useremail" class="form-control">
                     <label class="form-label" for="useremail">Email</label>
                   </div>
                   <div class="form-outline my-3">
-                    <input type="password" name="userpassword" id="userpassword" class="form-control">
+                    <input type="password" name="userpassword" placeholder="Enter Your Password" id="userpassword" class="form-control">
                     <label class="form-label" for="userpassword">Password</label>
                   </div>
-                  <input type="submit" value="Login" class="btn btn-primary d-block mx-auto">
-                  <p class="text-center my-3">Not a member? <a href="/signup">Register</a></p>
+                  <input type="submit" value="Signup" class="btn btn-primary d-block mx-auto">
+                  <p class="text-center my-3">Already a member? <a href="/login">Login</a></p>
                 </form>
           </div>
         </div>
